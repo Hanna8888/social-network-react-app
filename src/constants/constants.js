@@ -1,0 +1,1 @@
+export const STYLE_CONSOLE = 'color: yellow; font-size: 15px;';

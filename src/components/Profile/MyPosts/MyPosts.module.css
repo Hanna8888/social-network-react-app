@@ -1,0 +1,12 @@
+.Root {
+    display: flex;
+    flex-direction: column;
+}
+
+.list {
+    padding-left: 0;
+}
+
+.title {
+    font-size: 30px;
+}

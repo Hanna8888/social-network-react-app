@@ -1,0 +1,8 @@
+.Root {
+    grid-area: f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #21a89b;
+    color: #000;
+}

@@ -1,0 +1,16 @@
+.Root {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    font-size: 15px;
+    font-family: 'Nunito Sans', sans-serif;
+    width: 110px;
+    height: 35px;
+    margin-top: 10px;
+    background-color: #21a89b;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}

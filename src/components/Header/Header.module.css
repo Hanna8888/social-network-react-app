@@ -1,0 +1,30 @@
+.Root {
+    grid-area: h;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #21a89b;
+    align-items: center;
+}
+
+.Logo {
+    width: 100px;
+}
+
+.button {
+    width: 80px;
+    height: 25px;
+    border: none;
+    background-color: #1b1b1b;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.logo__link {
+    text-decoration: none;
+    color: #000;
+    font-size: 19px;
+}

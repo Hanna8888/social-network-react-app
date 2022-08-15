@@ -1,0 +1,42 @@
+.Root {
+    display: flex;
+    flex-direction: column;
+}
+
+.img {
+    width: 170px;
+}
+
+input {
+    margin: 20px 0 40px 0;
+}
+
+.status {
+    text-align: left;
+}
+
+.bg {
+    width: 700px;
+    height: 200px;
+}
+
+.List {
+    list-style-type: none;
+    text-align: left;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.List li {
+    padding-top: 10px;
+}
+
+.List__item {
+    display: flex;
+}
+
+.List__title {
+    color: #5e5853;
+    text-align: left;
+    margin-right: 15px;
+}

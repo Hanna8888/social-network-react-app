@@ -1,0 +1,33 @@
+.Root {
+    grid-area: s;
+    background-color: #1b1b1b;
+    width: 200px;
+}
+
+ul {
+    padding: 0px;
+}
+
+.nav li{
+    list-style-type: none;
+    padding: 15px 0px 15px 25px;
+}
+
+.item {
+    color: #757575;
+    text-decoration: none;
+}
+
+aside li:hover {
+    background-color: #0c0c0c;
+    color: #ffffff;
+    display: block;
+}
+
+.active {
+    color: #ffffff;
+}
+
+.nav {
+    margin-bottom: 50px;
+}

@@ -1,0 +1,23 @@
+.Root {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.Root__item {
+    list-style-type: none;
+    border: 1px solid #5e5853;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+li {
+    padding: 15px 25px 15px 30px;
+}
+
+.Root__item_selected {
+    font-weight: 600;
+    color: #21a89b;
+}

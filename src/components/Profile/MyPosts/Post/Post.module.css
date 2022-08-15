@@ -1,0 +1,17 @@
+.Root {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.Root img {
+    width: 50px;
+    margin-right: 20px;
+}
+
+.like {
+    text-align: left;
+    margin: 25px 15px 0 0;
+    color: crimson;
+    font-size: 15px;
+}

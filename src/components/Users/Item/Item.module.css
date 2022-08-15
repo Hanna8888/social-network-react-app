@@ -1,0 +1,44 @@
+.Root {
+    margin-bottom: 30px;
+    list-style-type: none;
+}
+
+.img {
+    width: 100px;
+}
+
+a{
+    text-decoration: none;
+}
+
+span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #757575;
+}
+
+.button {
+    margin-top: 10px;
+    width: 150px;
+    height: 40px;
+    background-color: #17756c;
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #21a89b;
+}
+
+.button[disabled] {
+    background-color: #17756c;
+    cursor: not-allowed;
+}
+
+.button[disabled]:hover {
+    background-color: #17756c;
+    cursor: not-allowed;
+}
