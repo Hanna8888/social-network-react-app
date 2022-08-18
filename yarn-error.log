@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  SyntaxError: D:\react-projects\social-network-react-app\package.json: Unexpected token } in JSON at position 710
+  SyntaxError: D:\react-projects\social-network-react-app\package.json: Unexpected token } in JSON at position 709
       at JSON.parse (<anonymous>)
       at C:\Users\Dell\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1629:59
       at Generator.next (<anonymous>)
@@ -41,7 +41,7 @@ npm manifest:
       "redux-thunk": "^2.3.0"
     },
     "scripts": {
-      "predeploy": "yarn run build",
+      "predeploy": "npm run build",
       "deploy": "gh-pages -d build",
       "start": "react-scripts start",
       "build": "react-scripts build",
