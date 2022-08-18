@@ -2,7 +2,7 @@
   "name": "social-network",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://Hanna8888/github.io/social-network-react-app/",
+  "homepage": "https://Hanna8888.github.io/social-network-react-app/",
   "dependencies": {
     "axios": "^0.19.2",
     "classnames": "^2.2.6",
