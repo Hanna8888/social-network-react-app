@@ -10,12 +10,7 @@ export function initializedSuccess() {
 
 export function getInitializeThunk() {
     return async dispatch => {
-        try {
-            await dispatch(getMeThunk());
-            dispatch(initializedSuccess());
-        }
-        catch(e) {
-            throw new Error(e);
-        }
+        await dispatch(getMeThunk());
+        dispatch(initializedSuccess());
     }
 }
