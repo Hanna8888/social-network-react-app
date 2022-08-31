@@ -6,7 +6,6 @@ import store from './state/redux-store.js';
 import * as serviceWorker from './serviceWorker';
 import App from './App';
 import './index.css';
-import Header from "./components/Header";
 
 ReactDOM.render(
     <HashRouter>
