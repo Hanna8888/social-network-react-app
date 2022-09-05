@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import { useSelector, useDispatch } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import {Navigate} from "react-router";
 
 // actions
 import { loginThunk } from '../../state/auth/actions';
@@ -22,7 +22,7 @@ function Login({ className }) {
     }
 
     if (isAuth) {
-        return <Redirect to="/profile" />
+        return <Navigate to='/profile' />
     }
 
     return (

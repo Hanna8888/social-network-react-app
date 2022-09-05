@@ -1,7 +1,7 @@
 import React, { useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+import {useParams} from "react-router-dom";
 import { compose } from 'redux';
 
 // hoc
@@ -18,14 +18,16 @@ import Preloader from '../common/Preloader/Preloader';
 import MyPosts from './MyPosts/MyPosts';
 import Info from './Info/Info';
 
-function Profile({ match }) {
+
+function Profile() {
+    const params = useParams();
     const dispatch = useDispatch();
     const autorizedUserId = useSelector(state => state.auth.userId);
     const profile = useSelector(state => state.profile.profile);
     const status = useSelector(state => state.profile.status);
 
     const handleUserId = useCallback(() => {
-        let userId = match.params.userId;
+        let userId = params.userId;
 
         if (!userId) {
             userId = autorizedUserId;
@@ -33,7 +35,7 @@ function Profile({ match }) {
 
         dispatch(getProfileThunk(userId));
         dispatch(getUserStatusThunk(userId));
-    }, [autorizedUserId, dispatch, match.params.userId])
+    }, [autorizedUserId, dispatch, params.userId])
 
     useEffect(() => {
         handleUserId();
@@ -47,7 +49,7 @@ function Profile({ match }) {
 
     return (
         <div>
-            <Info isOwner={!match.params.userId} profile={profile} status={status} />
+            <Info isOwner={!params.userId} profile={profile} status={status} />
             <MyPosts />
         </div>
     )
@@ -58,6 +60,5 @@ Profile.propTypes = {
 }
 
 export default compose(
-    withRouter,
     WithAuthRedirect
 )(Profile);

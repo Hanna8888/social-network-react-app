@@ -1,7 +1,6 @@
 import React, { useEffect, lazy, Suspense } from 'react';
-import { Route, withRouter, Switch, Redirect } from 'react-router-dom';
+import { Route, Routes, Navigate} from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { compose } from 'redux';
 
 // actions
 import { getInitializeThunk } from '../src/state/app/actions';
@@ -10,7 +9,7 @@ import { getInitializeThunk } from '../src/state/app/actions';
 import Preloader from './components/common/Preloader';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
-import Profile from './components/Profile';
+import Profile from "./components/Profile";
 import Login from './components/Login';
 import Footer from './components/Footer';
 
@@ -31,42 +30,32 @@ function App() {
     if (!initialized) {
         return <Preloader />
     }
-
     return (
         <div className="container">
             <Header />
             <Sidebar />
 
             <div className="content">
-                <Switch>
-                    {<Route exact path="/" render={() => {
-                        return <Redirect to={"/profile"} />
-                    }} />}
+                <Routes>
+                    <Route path="/profile" element={<Profile />} />
 
-                    {<Route path="/profile/:userId?" render={() => {
-                        return <Profile />
-                    }} />}
+                    <Route exact path='/' element={<Navigate to="/profile" replace/>}/>
 
-                    <Route path="/dialogs" render={() => {
-                        return <Suspense fallback={<div>Loading...</div>}>
-                            <Dialogs />
-                        </Suspense>
-                    }} />
+                    <Route path='/profile/:userId' element={<Profile/>}/>
 
-                    <Route path="/users" render={() => {
-                        return <Suspense fallback={<div>Loading...</div>}>
-                            <Users />
-                        </Suspense>
-                    }} />
+                    <Route path='/dialogs' element={<Suspense fallback={<div>Loading...</div>}>
+                        <Dialogs />
+                    </Suspense>} />
 
-                    <Route path="/login" render={() => {
-                        return <Login />
-                    }} />
+                    <Route path='/users' element={<Suspense fallback={<div>Loading...</div>}>
+                        <Users />
+                    </Suspense>} />
 
-                    <Route path="*" render={() => {
-                        return <div>404 page</div>
-                    }} />
-                </Switch>
+                    <Route path="/login" element={<Login />} />
+
+                    <Route path="*" element={<div>404 page</div>} />
+
+                </Routes>
             </div>
 
             <Footer />
@@ -74,4 +63,4 @@ function App() {
     )
 }
 
-export default compose(withRouter)(App);
+export default App;

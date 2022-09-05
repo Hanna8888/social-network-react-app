@@ -12,24 +12,21 @@ function Sidebar({ className }) {
                     <li>
                         <NavLink
                                 to="/profile"
-                                className={styles.item}
-                                activeClassName={styles.active}>
+                                className={cn(styles.item, (navData) => (navData.isActive ? "active-style" : 'none'))}>
                                     Profile
                         </NavLink>
                     </li>
                     <li>
                         <NavLink
                                 to="/dialogs"
-                                className={styles.item}
-                                activeClassName={styles.active}>
+                                className={cn(styles.item, (navData) => (navData.isActive ? "active-style" : 'none'))}>
                                     Messages
                         </NavLink>
                     </li>
                     <li>
                         <NavLink
                                 to="/users"
-                                className={styles.item}
-                                activeClassName={styles.active}>
+                                className={cn(styles.item, (navData) => (navData.isActive ? "active-style" : 'none'))}>
                                     Users
                         </NavLink>
                     </li>

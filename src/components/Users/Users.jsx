@@ -32,7 +32,6 @@ function Users() {
 
     return (
         <div className={styles.users}>
-            {/* TODO Поправить пагинатор */}
             <Paginator totalCount={totalCount} pageSize={pageSize} currentPage={currentPage} />
 
             <ul className={styles.user__list}>

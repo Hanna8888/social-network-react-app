@@ -8,7 +8,6 @@ import Status from '../Status/Status';
 
 // actions
 import { sendPhotoThunk } from '../../../state/profile/actions';
-//import { instanceAxios } from '../../../utils/api';
 
 // pic
 import userPhoto from '../../../assets/images/user.png';
