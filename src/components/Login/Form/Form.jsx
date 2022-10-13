@@ -16,7 +16,7 @@ import styles from './Form.module.css';
 import {Input} from "../../common/form-controls/form-controls";
 
 const maxLength100 = maxLengthCreator(100);
-const minLength5 = minLengthCreator(5);
+const minLength5 = minLengthCreator(4);
 
 function LoginForm({ className, handleSubmit, error, captchaUrl }) {
     return (
