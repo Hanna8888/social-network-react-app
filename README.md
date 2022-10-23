@@ -15,4 +15,3 @@ I've used the following resources as listed. These are some awesome creation and
 email and password for authorization:
 email: free@samuraijs.com
 password: free
-Works only with VPN (API has not yet been transferred to a non-Russian server), since the app was created before the war.
